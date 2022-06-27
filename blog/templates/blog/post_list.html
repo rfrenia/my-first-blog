@@ -7,17 +7,23 @@
         <header>
             <h1><a href="/">Ryans Django Girls Blog</a></h1>
         </header>
-
+        {% for post in posts %}
         <article>
-            <time>published: 25.06.2014, 1:14</time>
-            <h2><a href="">My first post</a></h2>
-            <p>Test this first area.</p>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </article>
+    {% endfor %}
 
-        <article>
+    {% for post in posts %}
+    <article>
+
             <time>published: 26.06.2014, 1:14</time>
             <h2><a href="">My second post</a></h2>
             <p>Test this 2nd area.</p>
-        </article>
+            <p>{{ post.text|linebreaksbr }}</p>
+        {{ posts }}
+    </article>
+    {% endfor %}
     </body>
 </html>
