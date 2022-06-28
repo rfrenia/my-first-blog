@@ -1,5 +1,3 @@
-
-# Create your views here.
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils import timezone
